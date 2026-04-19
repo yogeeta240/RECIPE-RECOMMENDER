@@ -36,7 +36,6 @@ const fetchWithRetry = async (url, retries = 3, delay = 3000) => {
 };
 
 function AppContent() {
-  const { theme: currentTheme } = useTheme();
   const [recommendations, setRecommendations] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
