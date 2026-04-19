@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #FFF8F5; /* Fallback color */
+  background-image: url('/public/images/background.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps background stable on scroll */
+  background-repeat: no-repeat;
+}
+
+/* Overlay to improve text readability */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 248, 245, 0.7); /* Semi-transparent peach overlay */
+  z-index: -1; /* Behind content */
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Ensure content is above the background */
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    background-attachment: scroll; /* Avoid fixed background on mobile for performance */
+  }
+}
